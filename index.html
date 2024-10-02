@@ -1,6 +1,3 @@
-Here's a more concise version of your HTML code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,56 +9,55 @@ Here's a more concise version of your HTML code:
 </head>
 
 <body class="lex-font">
+
     <header>
         <nav>
             <a href="2ndindex.html">Blog</a>
             <h6><img src="assets/logo.png" alt="">Donate Bangladesh</h6>
-            <div class="balance">
-                <p><img src="assets/coin.png" alt=""><span>1000</span>BDT</p>
-            </div>
+            <p class="balance"><img src="assets/coin.png" alt=""><span>1000</span>BDT</p>
         </nav>
         <section class="page">
             <button id="donateButton" onclick="toggleSection('donate')">Donate</button>
             <button id="historyButton" onclick="toggleSection('history')">History</button>
         </section>
     </header>
-    
+
     <main>
         <section class="donate">
             <div class="donate-card">
-                <img src="assets/noakhali.png" alt="pic1">
+                <img src="assets/noakhali.png" alt="Flood">
                 <div class="content">
-                    <div class="bal"><img src="assets/coin.png" alt=""><p><span id="card-balance-1">0</span> BDT</p></div>
-                    <h3 id="card-title-1">Donate for Flood at Noakhali, Bangladesh</h3>
-                    <p>The recent floods in Noakhali have caused significant damage to homes and infrastructure...</p>
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-1">0 </span>BDT</p>
+                    <h3>Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p>Help provide essential supplies to flood victims. Every contribution counts.</p>
                     <form onsubmit="validateDonation(event, 1)">
-                        <input type="number" id="donate-input-1" placeholder="Write Donation Amount"><br>
+                        <input type="number" id="donate-input-1" placeholder="Donation Amount">
                         <button type="submit">Donate Now</button>
                     </form>
                 </div>
             </div>
 
             <div class="donate-card">
-                <img src="assets/feni.png" alt="pic2">
+                <img src="assets/feni.png" alt="Famine">
                 <div class="content">
-                    <div class="bal"><img src="assets/coin.png" alt=""><p><span id="card-balance-2">0</span> BDT</p></div>
-                    <h3 id="card-title-2">Famine-2024 at Feni, Bangladesh</h3>
-                    <p>The recent floods in Feni have devastated local communities...</p>
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-2">0 </span>BDT</p>
+                    <h3>Famine-2024 at Feni, Bangladesh</h3>
+                    <p>Provide immediate aid to those affected by famine. Your support matters.</p>
                     <form onsubmit="validateDonation(event, 2)">
-                        <input type="number" id="donate-input-2" placeholder="Write Donation Amount"><br>
+                        <input type="number" id="donate-input-2" placeholder="Donation Amount">
                         <button type="submit">Donate Now</button>
                     </form>
                 </div>
             </div>
 
             <div class="donate-card">
-                <img src="assets/quota-protest.png" alt="pic3">
+                <img src="assets/quota-protest.png" alt="Protest">
                 <div class="content">
-                    <div class="bal"><img src="assets/coin.png" alt=""><p><span id="card-balance-3">0</span> BDT</p></div>
-                    <h3 id="card-title-3">Aid for Injured in the Quota Movement</h3>
-                    <p>The recent Quota movement has resulted in numerous injuries...</p>
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-3">0 </span>BDT</p>
+                    <h3>Aid for Injured in the Quota Movement</h3>
+                    <p>Help provide medical assistance and support to injured individuals.</p>
                     <form onsubmit="validateDonation(event, 3)">
-                        <input type="number" id="donate-input-3" placeholder="Write Donation Amount"><br>
+                        <input type="number" id="donate-input-3" placeholder="Donation Amount">
                         <button type="submit">Donate Now</button>
                     </form>
                 </div>
@@ -70,7 +66,7 @@ Here's a more concise version of your HTML code:
 
         <section class="history" style="display: none;">
             <div class="history-card">
-                <div id="historyList"><p>Your donation history will appear here.</p></div>
+                <p>Your donation history will appear here.</p>
             </div>
         </section>
 
@@ -78,17 +74,12 @@ Here's a more concise version of your HTML code:
             <div class="modal-content">
                 <h2>Congrats!</h2>
                 <img src="assets/coin.png" alt="Coin">
-                <p>You Have Donated for Humankind</p>
-                <strong>Successfully</strong>
-                <button onclick="closeModal()">Close confirmation</button>
+                <p>You Have Donated Successfully</p>
+                <button onclick="closeModal()">Close</button>
             </div>
         </div>
     </main>
 
     <script src="utilities.js"></script>
 </body>
-
 </html>
-```
-
-This version keeps the same functionality while trimming down redundant parts.

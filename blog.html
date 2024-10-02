@@ -1,67 +1,86 @@
-Here’s a shorter version of your HTML code while maintaining the functionality:
-
-```html
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="lex-font">
-  <header class="w-full">
-    <nav>
-      <a href="index.html">Home</a>
-      <h6><img src="assets/logo.png" alt="">Donate Bangladesh</h6>
-      <div class="balance"><p><img src="assets/coin.png" alt=""><span>1000</span>BDT</p></div>
-    </nav>
-  </header>
-  
-  <main class="w-[60%] mt-[100px]">
-    <h1 class="flex items-center font-bold text-4xl gap-x-2">Important FAQ <img src="assets/icons8-question.gif" alt=""></h1>
 
-    <div class="collapse collapse-arrow bg-base-200 mt-5 mb-5 shadow-lg shadow-gray-300">
-      <input type="radio" name="my-accordion-2" checked />
-      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
-      <div class="collapse-content">
-        <p>The DOM is a programming interface representing a webpage as a tree of objects, enabling dynamic updates.</p>
-      </div>
-    </div>
+    <header>
+        <nav>
+            <a href="2ndindex.html">Blog</a>
+            <h6><img src="assets/logo.png" alt="">Donate Bangladesh</h6>
+            <p class="balance"><img src="assets/coin.png" alt=""><span>1000</span>BDT</p>
+        </nav>
+        <section class="page">
+            <button id="donateButton" onclick="toggleSection('donate')">Donate</button>
+            <button id="historyButton" onclick="toggleSection('history')">History</button>
+        </section>
+    </header>
 
-    <div class="collapse collapse-arrow bg-base-200 mt-5 mb-5 shadow-lg shadow-gray-300">
-      <input type="radio" name="my-accordion-2" />
-      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-      <div class="collapse-content">
-        <p>Use methods like getElementById("id"), querySelector("selector"), getElementsByClassName("class"), or getElementsByTagName("tag").</p>
-      </div>
-    </div>
+    <main>
+        <section class="donate">
+            <div class="donate-card">
+                <img src="assets/noakhali.png" alt="Flood">
+                <div class="content">
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-1">0 </span>BDT</p>
+                    <h3>Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p>Help provide essential supplies to flood victims. Every contribution counts.</p>
+                    <form onsubmit="validateDonation(event, 1)">
+                        <input type="number" id="donate-input-1" placeholder="Donation Amount">
+                        <button type="submit">Donate Now</button>
+                    </form>
+                </div>
+            </div>
 
-    <div class="collapse collapse-arrow bg-base-200 mt-5 mb-5 shadow-lg shadow-gray-300">
-      <input type="radio" name="my-accordion-2" />
-      <div class="collapse-title text-xl font-medium">What is event delegation, and why is it useful?</div>
-      <div class="collapse-content">
-        <p>Event delegation uses a parent element to manage events for child elements, improving performance and handling dynamic elements.</p>
-      </div>
-    </div>
+            <div class="donate-card">
+                <img src="assets/feni.png" alt="Famine">
+                <div class="content">
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-2">0 </span>BDT</p>
+                    <h3>Famine-2024 at Feni, Bangladesh</h3>
+                    <p>Provide immediate aid to those affected by famine. Your support matters.</p>
+                    <form onsubmit="validateDonation(event, 2)">
+                        <input type="number" id="donate-input-2" placeholder="Donation Amount">
+                        <button type="submit">Donate Now</button>
+                    </form>
+                </div>
+            </div>
 
-    <div class="collapse collapse-arrow bg-base-200 mt-5 mb-5 shadow-lg shadow-gray-300">
-      <input type="radio" name="my-accordion-2" />
-      <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles?</div>
-      <div class="collapse-content">
-        <p>Use setAttribute() and getAttribute() for attributes, and element.style.property for styles (e.g., element.style.color = "red").</p>
-      </div>
-    </div>
-  </main>
+            <div class="donate-card">
+                <img src="assets/quota-protest.png" alt="Protest">
+                <div class="content">
+                    <p class="bal"><img src="assets/coin.png" alt=""><span id="card-balance-3">0 </span>BDT</p>
+                    <h3>Aid for Injured in the Quota Movement</h3>
+                    <p>Help provide medical assistance and support to injured individuals.</p>
+                    <form onsubmit="validateDonation(event, 3)">
+                        <input type="number" id="donate-input-3" placeholder="Donation Amount">
+                        <button type="submit">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-  <script src="utilities.js"></script>
+        <section class="history" style="display: none;">
+            <div class="history-card">
+                <p>Your donation history will appear here.</p>
+            </div>
+        </section>
+
+        <div id="donationModal" class="modal">
+            <div class="modal-content">
+                <h2>Congrats!</h2>
+                <img src="assets/coin.png" alt="Coin">
+                <p>You Have Donated Successfully</p>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="utilities.js"></script>
 </body>
 
 </html>
-```
-
-This version condenses the code by simplifying descriptions while maintaining the structure and functionality.
